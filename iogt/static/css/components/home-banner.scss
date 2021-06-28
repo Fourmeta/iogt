@@ -1,0 +1,20 @@
+.home-banner{
+  background-color: $primary_light;
+  padding: 12px 0;
+  border-radius: 8px;
+  background-image: url("../images/home_banner.png");
+  background-size: 120px auto;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin: 4px 0;
+  &__logo{
+    max-width: 80px;
+  }
+  &__title{
+    max-width: 140px;
+    margin: 6px 0 14px;
+  }
+  &__btn{
+    max-width: 134px;
+  }
+}

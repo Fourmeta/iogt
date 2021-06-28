@@ -1,0 +1,33 @@
+.nav-bar-item{
+  a{
+    padding: 8px 0;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+
+  }
+  &.active a{
+    background-color: $primary_dark;
+  }
+  &__icon{
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    img{
+      font-size: 10px;
+    }
+  }
+  &__title{
+    margin-top: 2px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+}

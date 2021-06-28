@@ -1,0 +1,58 @@
+.icon-btn{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: $pearl;
+  border: 1px solid #EFEFEF;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: $delay;
+  &__icon{
+    display: block;
+    width: 18px;
+    height: 18px;
+    img{
+      display: block;
+    }
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+    color: #303030;
+    letter-spacing: 0.01em;
+    margin-left: 10px;
+  }
+  &:hover{
+    background-color: $pearl_hover;
+  }
+
+  &--red{
+    background-color: $red_light;
+    border-color: $red_light;
+  }
+  &--red &__title{
+    color: $red;
+  }
+  &--blue{
+    background-color: $blue_light;
+    border-color: $blue_light;
+  }
+  &--blue &__title{
+    color: $primary;
+  }
+  &--violet{
+    background-color: $violet_light;
+    border-color: $violet_light;
+  }
+  &--violet &__title{
+    color: $violet;
+  }
+  &--green{
+    background-color: $green_light;
+    border-color: $green_light;
+  }
+  &--green &__title{
+    color: $green;
+  }
+}

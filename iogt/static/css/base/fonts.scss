@@ -1,0 +1,9 @@
+@include fontface($Poppins, 'Poppins/Poppins-Light', 300, 'normal');
+@include fontface($Poppins, 'Poppins/Poppins-Regular', 400, 'normal');
+@include fontface($Poppins, 'Poppins/Poppins-Medium', 500, 'normal');
+@include fontface($Poppins, 'Poppins/Poppins-SemiBold', 600, 'normal');
+@include fontface($Poppins, 'Poppins/Poppins-ExtraBold', 800, 'normal');
+
+@include fontface($Roboto, 'Roboto/Roboto-Regular', 400, 'normal');
+@include fontface($Roboto, 'Roboto/Roboto-Medium', 500, 'normal');
+@include fontface($Roboto, 'Roboto/Roboto-Bold', 700, 'normal');

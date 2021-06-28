@@ -1,0 +1,10 @@
+.nav-bar{
+  background-color: $primary;
+  &__wrap{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
+    width: 25%;
+  }
+}

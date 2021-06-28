@@ -1,0 +1,42 @@
+.cust-btn{
+  border-radius: 100px;
+  border: 1px solid #303030;
+  padding: 8px 12px;
+  display: block;
+  width: 100%;
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+  span{
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    line-height: 14px;
+    color: #303030;
+  }
+  &:hover{
+    background-color: #303030;
+    span{
+      color: #fff;
+    }
+  }
+  &--secondary{
+    border-radius: 8px;
+    border: none;
+  }
+  &--dark{
+    background-color: #303030;
+    span{
+      color: #fff;
+    }
+    &:hover{
+      background-color: lighten(#303030, 10);
+    }
+  }
+  &--white{
+    background-color: #fff;
+    color: $grey_dark;
+  }
+}

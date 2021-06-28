@@ -1,0 +1,252 @@
+//*** M E D I A ***//
+$xxl: 1700;
+$xl: 1339.98;
+$lg: 1199.98;
+$md: 991.98;
+$sm: 767.98;
+$xs: 575.98;
+$ss: 319.98;
+
+$desktop: 1700;
+$laptopL: 1440;
+$laptopM: 1200;
+$laptop: 1024;
+$tablet: 768;
+$mobileB: 576;
+$mobileL: 425;
+$mobileM: 375;
+$mobileS: 320;
+
+
+/* Mobile First */
+@mixin min-from($media) {
+  @if $media == desktop {
+    @media only screen and (min-width: $desktop + px) {
+      @content;
+    }
+  } @else if $media == laptopL {
+    @media only screen and (min-width: $laptopL + px) {
+      @content;
+    }
+  } @else if $media == laptopM {
+    @media only screen and (min-width: $laptopM + px) {
+      @content;
+    }
+  } @else if $media == laptop {
+    @media only screen and (min-width: $laptop + px) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $tablet + px) {
+      @content;
+    }
+  } @else if $media == mobileL {
+    @media only screen and (min-width: $mobileL + px) {
+      @content;
+    }
+  } @else if $media == mobileB {
+    @media only screen and (min-width: $mobileB + px) {
+      @content;
+    }
+  } @else if $media == mobileM {
+    @media only screen and (min-width: $mobileM + px) {
+      @content;
+    }
+  } @else if $media == mobileS {
+    @media only screen and (min-width: $mobileS + px) {
+      @content;
+    }
+  }
+}
+
+// 1700
+@include min-from(desktop) {
+
+}
+
+// 1440
+@include min-from(laptopL) {
+
+}
+
+// 1200
+@include min-from(laptopM) {
+
+}
+
+// 1024
+@include min-from(laptop) {
+
+}
+
+// 768
+@include min-from(tablet) {
+
+}
+
+// 576
+@include min-from(mobileB) {
+
+}
+
+// 425
+@include min-from(mobileL) {
+
+}
+
+// 375
+@include min-from(mobileM) {
+
+}
+
+// 320
+@include min-from(mobileS) {
+
+}
+
+/* Desctop First */
+@mixin max-to($media) {
+  @if $media == xxl {
+    @media only screen and (max-width: $xxl + px) {
+      @content;
+    }
+  }
+  @if $media == xl {
+    @media only screen and (max-width: $xl + px) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (max-width: $lg + px) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (max-width: $md + px) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media only screen and (max-width: $sm + px) {
+      @content;
+    }
+  } @else if $media == xs {
+    @media only screen and (max-width: $xs + px) {
+      @content;
+    }
+  } @else if $media == ss {
+    @media only screen and (max-width: $ss + px) {
+      @content;
+    }
+  }
+}
+
+@include max-to(xl) {
+
+}
+
+@include max-to(lg) {
+
+}
+
+@include max-to(md) {
+
+}
+
+@include max-to(sm) {
+
+}
+
+@include max-to(xs) {
+
+}
+
+@include max-to(ss) {
+
+}
+
+//*** F O N T S ***// eot,wof,ttf,svg
+@mixin fontface($name, $file, $weight, $style) {
+  @font-face {
+    font-family: "#{$name}";
+    font-weight: $weight;
+    font-style: $style;
+
+    src: url('../../fonts/#{$file}.eot');
+    src: url('../../fonts/#{$file}.eot?#iefix') format('embedded-opentype');
+    src: url('../../fonts/#{$file}.woff') format('woff');
+    src: url('../../fonts/#{$file}.ttf') format('truetype');
+  }
+}
+
+
+// Example how to use it
+// @include fontface(Roboto,RobotoSlab-Some,500,italic)
+
+
+// *** View Ports ***//
+@function vie($pxsize, $media) {
+
+  @if $media == xxl {
+    $media: $xxl;
+  } @else if $media == xl {
+    $media: $xl;
+  } @else if $media == lg {
+    $media: $lg;
+  } @else if $media == md {
+    $media: $md;
+  } @else if $media == sm {
+    $media: $sm;
+  } @else if $media == xs {
+    $media: $xs;
+  } @else if $media == ss {
+    $media: $ss;
+  } @else if $media == f_xl {
+    $media: $f_xl;
+  } @else if $media == f_lg {
+    $media: $f_lg;
+  } @else if $media == f_md {
+    $media: $f_md;
+  } @else if $media == f_sm {
+    $media: $f_sm;
+  } @else if $media == f_xs {
+    $media: $f_xs;
+  } @else if $media == f_ss {
+    $media: $f_ss;
+  }
+
+  @return $pxsize/($media/100)+vw;
+}
+
+// Example of Use vewport mixin
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #ADD8E6;
+  color: #fff;
+  width: 650px;
+  height: 650px;
+  font-size: 28px;
+  border: 5px solid #2265a2;
+
+  @include max-to(xl) {
+    background: red;
+    width: vie(450, xl);
+    height: vie(450, xl);
+    font-size: vie(28, xl);
+  }
+
+  @include max-to(md) {
+    background: red;
+    width: vie(450, md);
+    height: vie(450, md);
+    font-size: vie(28, md);
+    border: vie(10, md) solid #000;
+  }
+
+  @include max-to(xs) {
+    background: red;
+    width: vie(250, xs);
+    height: vie(250, xs);
+    font-size: vie(18, xs);
+  }
+}

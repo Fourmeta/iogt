@@ -1,0 +1,25 @@
+.polls-widget{
+  &__title{
+    margin-bottom: 16px;
+  }
+  &__form{
+    margin-top: 16px;
+  }
+  &__form-title{
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $grey;
+  }
+  &__item{
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__submit{
+    margin-top: 24px;
+  }
+}

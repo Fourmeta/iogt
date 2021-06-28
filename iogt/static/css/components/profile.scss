@@ -1,0 +1,29 @@
+.profile{
+  &__title{
+    display: inline-block;
+    width: 100%;
+    line-height: 32px;
+    margin-bottom: 20px;
+    &:after{
+      clear: both;
+    }
+  }
+  &__icon{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    background-color: #0070E2;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+  }
+  &__btn{
+    margin-bottom: 8px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

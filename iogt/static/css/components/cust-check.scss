@@ -1,0 +1,22 @@
+.cust-check{
+  display: block;
+  input{
+    display: none;
+  }
+  &__title{
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    background-color: $pearl;
+    border: 1px solid $fog;
+    border-radius: 8px;
+    transition: $delay;
+  }
+  input:checked + &__title{
+    background-color: $pearl_hover;
+  }
+}
