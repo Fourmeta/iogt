@@ -1,0 +1,19 @@
+{
+  "name": "fourmeta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fourmeta",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.3",
+    "sass": "^1.35.1"
+  }
+}

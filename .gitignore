@@ -21,6 +21,8 @@ iogt/settings/local.py
 *.py[cod] 
 *$py.class 
 
+node_modules
+
 # Distribution / packaging 
 .Python build/ 
 develop-eggs/ 
