@@ -16,7 +16,6 @@ def render_checkboxes(field):
 
 @register.inclusion_tag('questionnaires/tags/textarea.html')
 def render_textarea(field):
-    print(field)
     return {'field': field}
 
 
