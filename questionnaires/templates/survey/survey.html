@@ -56,9 +56,6 @@
                             <div class="quest-item__desc">
                                 <p>{{ field.label }}</p>
                             </div>
-                            {% for f in page.get_form_fields %}
-                                {{ f.page_break }}
-                            {% endfor %}
                             {% if field.field.widget.input_type == "radio" %}
                                 {% render_radios field %}
                             {% elif field.field.widget.input_type == "checkbox" %}
