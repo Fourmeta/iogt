@@ -11,7 +11,8 @@
 {% block content %}
     <div class="survey-page">
         <div class="container btn-back-container">
-            <a href="{% if back_url != None %}{{ back_url }}{% else %}/{% endif %}"
+            <a href="{% if back_url != None %}
+{{ back_url }}{% else %}/{% endif %}"
                class="btn-back">
                 <figure class="btn-back__icon">
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
@@ -55,6 +56,9 @@
                             <div class="quest-item__desc">
                                 <p>{{ field.label }}</p>
                             </div>
+                            {% for f in page.get_form_fields %}
+                                {{ f.page_break }}
+                            {% endfor %}
                             {% if field.field.widget.input_type == "radio" %}
                                 {% render_radios field %}
                             {% elif field.field.widget.input_type == "checkbox" %}
