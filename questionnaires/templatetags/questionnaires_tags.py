@@ -25,7 +25,6 @@ def render_radios(field):
 
 @register.inclusion_tag('questionnaires/tags/checkboxes.html')
 def render_checkboxes(field):
-    print(field)
     return {'field': field}
 
 
