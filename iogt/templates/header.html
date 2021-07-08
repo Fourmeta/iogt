@@ -5,18 +5,38 @@
 {% get_available_languages as LANGUAGES %}
 {% get_language_info_list for LANGUAGES as languages %}
 
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/header.css' %}">
+{% endblock %}
 
 <header class="home-header">
-    <a href="/" >
+    <a href="/">
         {% image settings.home.SiteSettings.logo fill-102x40 as logo %}
-        <img src="{{ logo.url }}" />
+        <img src="{{ logo.url }}"/>
     </a>
     <div class="home-header__options">
-        <select>
-            {% for language in languages %}
-                <option value="{{ language.name_local }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>{{ language.name_local }}</option>
-            {% endfor %}
-        </select>  
+        <label for="language-code" class="select header__select">
+            <input type="checkbox" class="language-input"
+                   id="language-code"
+                   name="language-code"
+            >
+            <div class="select__selected"><p>{{ lang.name_local }}</p>
+                <div class="select__selected-icon"><img
+                        src="{% static "/icons/arrow-down.svg" %}"
+                        alt="Arrow down">
+                </div>
+            </div>
+            <div class="select__options">
+                {% for language in languages %}
+                    <div class="select__option {% if language.code == LANGUAGE_CODE %}select__option--selected{% endif %}">
+                        <a href="{% locale_set language.code request.path %}">
+                            <p>{{ language.name_local }}</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </label>
         <a class="js-search-btn" href="{% url "search" %}">
             <img src="{% static "icons/search.svg" %}" alt="Search">
         </a>

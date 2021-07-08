@@ -1080,7 +1080,7 @@
 
 .home-header__options img {
   margin: 0;
-  border-left: 1px solid #EFEFEF;
+  /*border-left: 1px solid #EFEFEF;*/
   padding: 5px 0;
   padding-left: 10px;
 }
